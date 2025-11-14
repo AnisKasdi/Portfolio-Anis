@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Title + SEO -->
+    <title>All Projects - Anis Kasdi</title>
+    <meta name="description" content="Explore cybersecurity, networking, web development, tools, and all projects by Anis Kasdi.">
+
+    <!-- Icons & Global Styles -->
+    <!-- Font Awesome provides all icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Main CSS (same file as your index) -->
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+
+</head>
+
+<body>
+
+    <!-- =========================================================
+         BACKGROUND EFFECTS
+         These 2 divs generate the animated gradient + floating
+         shapes in the background using CSS.
+         ========================================================= -->
+    <div class="bg-gradient"></div>
+    <div class="floating-shapes">
+        <!-- Each .shape is animated individually -->
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+    </div>
+
+    <!-- =========================================================
+         NAVIGATION BAR
+         Same navbar as index.html for full consistency.
+         Mobile menu handled by JavaScript (menuToggle).
+         ========================================================= -->
+    <nav id="navbar">
+        <div class="nav-container">
+
+            <!-- Logo (click = return to home) -->
+            <div class="logo">
+                <a href="index.html"><span class="logo-text">AK</span></a>
+            </div>
+
+            <!-- Navigation links (anchors or other pages) -->
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="index.html#about" class="nav-link">About</a>
+                <a href="index.html#services" class="nav-link">Services</a>
+                <a href="index.html#tech-stack" class="nav-link">Tech Stack</a>
+
+                <!-- Current page = active highlight -->
+                <a href="projects.html" class="nav-link active">All Projects</a>
+
+                <a href="index.html#cybersecurity" class="nav-link">Cybersecurity</a>
+                <a href="index.html#contact" class="nav-link">Contact</a>
+            </div>
+
+            <!-- Mobile hamburger menu -->
+            <div class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+        </div>
+    </nav>
+
+    <!-- =========================================================
+         HERO SECTION (Header of the page)
+         Purpose:
+         - Introduce the full project list
+         - Show stats (repos, languages, open-source)
+         - Provide context for the user
+         - Same design language as index.html hero
+         ========================================================= -->
+   <section class="page-header">
+    <div class="container">
+        <h1 class="section-title gradient-text">All Projects</h1>
+        <p class="section-description">
+            Browse all my development work — cybersecurity tools, network applications,
+            full-stack web apps, utilities, and more.
+        </p>
+    </div>
+</section>
+
+
+
+        <!-- =========================================================
+         PROJECT CATEGORY FILTERS
+         Purpose:
+         - Allow the user to filter projects by category
+         - Buttons use data-filter="category-name"
+         - JavaScript reads this attribute and shows/hides cards
+         - Categories MUST match project-card data-category=""
+         ========================================================= -->
+    <section class="section">
+        <div class="container">
+
+            <!-- Filter Buttons Bar -->
+            <div class="projects-filter-advanced">
+
+                <!-- "All" filter (shows all projects) -->
+                <!-- .active = highlighted by CSS -->
+                <button class="filter-btn active" data-filter="all">
+                    <i class="fas fa-th"></i> All
+                </button>
+
+                <!-- Security Projects -->
+                <button class="filter-btn" data-filter="security">
+                    <i class="fas fa-shield-alt"></i> Security
+                </button>
+
+                <!-- Web Projects -->
+                <button class="filter-btn" data-filter="web">
+                    <i class="fas fa-laptop-code"></i> Web
+                </button>
+
+                <!-- Network Projects -->
+                <button class="filter-btn" data-filter="network">
+                    <i class="fas fa-network-wired"></i> Network
+                </button>
+
+                <!-- Game Dev Projects -->
+                <button class="filter-btn" data-filter="game">
+                    <i class="fas fa-gamepad"></i> Games
+                </button>
+
+                <!-- Tooling / Utilities -->
+                <button class="filter-btn" data-filter="tools">
+                    <i class="fas fa-tools"></i> Tools
+                </button>
+
+                <!-- Portfolio Websites -->
+                <button class="filter-btn" data-filter="portfolio">
+                    <i class="fas fa-briefcase"></i> Portfolio
+                </button>
+
+            </div>
+
+
+                        <!-- =========================================================
+                 ALL PROJECTS GRID
+                 Purpose:
+                 - Display all projects in a clean, compact “mini-card” style
+                 - Each card has:
+                     - Category badge
+                     - Title + icon
+                     - Technologies (short)
+                     - Description
+                     - Tags
+                     - GitHub button
+                 - data-category="" must MATCH the filter buttons
+                 ========================================================= -->
+            <div class="all-projects-grid">
+
+
+                <!-- =====================================================
+                     SECURITY PROJECTS
+                     ===================================================== -->
+
+                <!-- AgentShield -->
+                <div class="project-card mini-card" data-category="security">
+                    <div class="project-badge">🛡️ Security</div>
+
+                    <div class="project-content">
+                        <!-- Project title + icon -->
+                        <h3><i class="fas fa-shield-alt"></i> AgentShield</h3>
+
+                        <!-- Short tech stack -->
+                        <p class="project-tech">JavaScript • Browser Security</p>
+
+                        <!-- Description -->
+                        <p>Anti-tracking browser extension blocking malicious scripts in real time.</p>
+
+                        <!-- Tags (keywords) -->
+                        <div class="project-tags">
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">Security</span>
+                            <span class="tag">Privacy</span>
+                        </div>
+
+                        <!-- GitHub button -->
+                        <a href="https://github.com/debyan145/Agentshield"
+                           target="_blank" class="project-link-btn">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <!-- AgentShield V1 -->
+                <div class="project-card mini-card" data-category="security">
+                    <div class="project-badge">🛡️ Security</div>
+
+                    <div class="project-content">
+                        <h3><i class="fas fa-user-secret"></i> AgentShield v1</h3>
+                        <p class="project-tech">JavaScript • Security</p>
+                        <p>First version of the privacy extension with monitoring features.</p>
+
+                        <div class="project-tags">
+                            <span class="tag">Extension</span>
+                            <span class="tag">Privacy</span>
+                        </div>
+
+                        <a href="https://github.com/debyan145/Agentshieldv1"
+                           target="_blank" class="project-link-btn">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Privacy Toolkit -->
+                <div class="project-card mini-card" data-category="security">
+                    <div class="project-badge">🛡️ Security</div>
+
+                    <div class="project-content">
+                        <h3><i class="fas fa-user-shield"></i> Privacy Toolkit</h3>
+                        <p class="project-tech">Python • JS • Security</p>
+                        <p>Toolkit designed to improve anonymity and control digital footprints.</p>
+
+                        <div class="project-tags">
+                            <span class="tag">Cookies</span>
+                            <span class="tag">Anonymity</span>
+                        </div>
+
+                        <a href="https://github.com/debyan145/privacy"
+                           target="_blank" class="project-link-btn">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+
+
+
+                <!-- =====================================================
+                     WEB DEVELOPMENT PROJECTS
+                     ===================================================== -->
+
+                <!-- Streaming platform -->
+                <div class="project-card mini-card" data-category="web">
+                    <div class="project-badge">💻 Web App</div>
+
+                    <div class="project-content">
+                        <h3><i class="fas fa-play-circle"></i> Streaming Platform</h3>
+                        <p class="project-tech">HTML • CSS • JS</p>
+                        <p>Video streaming system with sessions, playback, and user accounts.</p>
+
+                        <div class="project-tags">
+                            <span class="tag">Streaming</span>
+                            <span class="tag">Frontend</span>
+                        </div>
+
+                        <a href="https://github.com/debyan145/Streaming-project"
+                           target="_blank" class="project-link-btn">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Stream Your Day -->
+                <div class="project-card mini-card" data-category="web">
+                    <div class="project-badge">💻 Web App</div>
+
+                    <div class="project-content">
+                        <h3><i class="fas fa-video"></i> Stream Your Day</h3>
+                        <p class="project-tech">HTML • JS</p>
+                        <p>Social platform for streaming your daily moments live.</p>
+
+                        <div class="project-tags">
+                            <span class="tag">Live</span>
+                            <span class="tag">Social</span>
+                        </div>
+
+                        <a href="https://github.com/debyan145/Stream-your-day"
+                           target="_blank" class="project-link-btn">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Cowork -->
+                <div class="project-card mini-card" data-category="web">
+                    <div class="project-badge">💻 Web App</div>
+
+                    <div class="project-content">
+                        <h3><i class="fas fa-users"></i> Cowork Platform</h3>
+                        <p class="project-tech">HTML • Collaboration</p>
+                        <p>Workspace platform created for university team collaborations.</p>
+
+                        <div class="project-tags">
+                            <span class="tag">Collaboration</span>
+                            <span class="tag">Students</span>
+                        </div>
+
+                        <a href="https://github.com/debyan145/Cowork"
+                           target="_blank" class="project-link-btn">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <!-- E-commerce -->
+                <div class="project-card mini-card" data-category="web">
+                    <div class="project-badge">🛒 E-commerce</div>
+
+                    <div class="project-content">
+                        <h3><i class="fas fa-cart-shopping"></i> Online Shop</h3>
+                        <p class="project-tech">HTML • CSS • JS</p>
+                        <p>Full online store with products, cart, and checkout logic.</p>
+
+                        <div class="project-tags">
+                            <span class="tag">Shop</span>
+                            <span class="tag">Frontend</span>
+                        </div>
+
+                        <a href="https://github.com/debyan145/Ecommerce-site"
+                           target="_blank" class="project-link-btn">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+
+
+
+                <!-- =====================================================
+                     NETWORK PROJECTS
+                     ===================================================== -->
+
+                <!-- Chat Server -->
+                <div class="project-card mini-card" data-category="network">
+                    <div class="project-badge">🌐 Network</div>
+
+                    <div class="project-content">
+                        <h3><i class="fas fa-comments"></i> Chat Server</h3>
+                        <p class="project-tech">Python • Scapy</p>
+                        <p>Multi-client chat server using Scapy and select() for concurrency.</p>
+
+                        <div class="project-tags">
+                            <span class="tag">Sockets</span>
+                            <span class="tag">Scapy</span>
+                        </div>
+
+                        <a href="https://github.com/debyan145/Real-time-chat-server"
+                           target="_blank" class="project-link-btn">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Select Server -->
+                <div class="project-card mini-card" data-category="network">
+                    <div class="project-badge">🌐 Network</div>
+
+                    <div class="project-content">
+                        <h3><i class="fas fa-server"></i> Multi-Client Server</h3>
+                        <p class="project-tech">Python • Select</p>
+                        <p>I/O multiplexing server handling multiple clients simultaneously.</p>
+
+                        <div class="project-tags">
+                            <span class="tag">Select()</span>
+                            <span class="tag">Sockets</span>
+                        </div>
+
+                        <a href="https://github.com/debyan145/Serveur-multiple-using-select"
+                           target="_blank" class="project-link-btn">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Echo Server -->
+                <div class="project-card mini-card" data-category="network">
+                    <div class="project-badge">🌐 Network</div>
+
+                    <div class="project-content">
+                        <h3><i class="fas fa-terminal"></i> Echo Server</h3>
+                        <p class="project-tech">Python • Scapy</p>
+                        <p>Echo server built using raw packet manipulation with Scapy.</p>
+
+                        <div class="project-tags">
+                            <span class="tag">Low-level</span>
+                            <span class="tag">Scapy</span>
+                        </div>
+
+                        <a href="https://github.com/debyan145/echo-serveur-scapy"
+                           target="_blank" class="project-link-btn">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <!-- HTTP Client -->
+                <div class="project-card mini-card" data-category="network">
+                    <div class="project-badge">🌐 Network</div>
+
+                    <div class="project-content">
+                        <h3><i class="fas fa-globe"></i> HTTP Client</h3>
+                        <p class="project-tech">Python • Raw Packets</p>
+                        <p>Custom HTTP client built using crafted Scapy packets.</p>
+
+                        <div class="project-tags">
+                            <span class="tag">HTTP</span>
+                            <span class="tag">Scapy</span>
+                        </div>
+
+                        <a href="https://github.com/debyan145/http-client"
+                           target="_blank" class="project-link-btn">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+
+
+                <!-- =====================================================
+                     GAME DEVELOPMENT PROJECTS
+                     ===================================================== -->
+
+                <!-- Pipes Game -->
+                <div class="project-card mini-card" data-category="game">
+                    <div class="project-badge">🎮 Game</div>
+
+                    <div class="project-content">
+                        <h3><i class="fas fa-shapes"></i> Pipes Game</h3>
+                        <p class="project-tech">C • Puzzle Game</p>
+                        <p>Puzzle game implemented in pure C with algorithmic logic.</p>
+
+                        <div class="project-tags">
+                            <span class="tag">C</span>
+                            <span class="tag">Algorithms</span>
+                        </div>
+
+                        <a href="https://github.com/debyan145/Pipes_games"
+                           target="_blank" class="project-link-btn">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Java Game -->
+                <div class="project-card mini-card" data-category="game">
+                    <div class="project-badge">🎮 Game</div>
+
+                    <div class="project-content">
+                        <h3><i class="fas fa-gamepad"></i> Java Game</h3>
+                        <p class="project-tech">Java • OOP</p>
+                        <p>2D game written using object-oriented Java and sprite rendering.</p>
+
+                        <div class="project-tags">
+                            <span class="tag">Java</span>
+                            <span class="tag">OOP</span>
+                        </div>
+
+                        <a href="https://github.com/debyan145/Java-Game"
+                           target="_blank" class="project-link-btn">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+
+
+                <!-- =====================================================
+                     TOOLS
+                     ===================================================== -->
+
+                <!-- Find Error -->
+                <div class="project-card mini-card" data-category="tools">
+                    <div class="project-badge">🛠️ Tool</div>
+
+                    <div class="project-content">
+                        <h3><i class="fas fa-bug"></i> Find Error</h3>
+                        <p class="project-tech">C • CLI Tool</p>
+                        <p>CLI tool written in C to detect potential errors in source files.</p>
+
+                        <div class="project-tags">
+                            <span class="tag">C</span>
+                            <span class="tag">Debug</span>
+                        </div>
+
+                        <a href="https://github.com/debyan145/Find_erreur_withC"
+                           target="_blank" class="project-link-btn">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <!-- HealMe -->
+                <div class="project-card mini-card" data-category="tools">
+                    <div class="project-badge">🛠️ Tool</div>
+
+                    <div class="project-content">
+                        <h3><i class="fas fa-heartbeat"></i> HealMe</h3>
+                        <p class="project-tech">Python • Health</p>
+                        <p>Daily wellness tracker with dashboards and progress insights.</p>
+
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Health</span>
+                        </div>
+
+                        <a href="https://github.com/debyan145/HealMe"
+                           target="_blank" class="project-link-btn">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+
+
+                <!-- =====================================================
+                     PORTFOLIO SITES
+                     ===================================================== -->
+
+                <!-- MK Architecture -->
+                <div class="project-card mini-card" data-category="portfolio">
+                    <div class="project-badge">💼 Portfolio</div>
+
+                    <div class="project-content">
+                        <h3><i class="fas fa-home"></i> MK Architecture</h3>
+                        <p class="project-tech">HTML • Portfolio</p>
+                        <p>Portfolio site created for an architecture student.</p>
+
+                        <div class="project-tags">
+                            <span class="tag">Portfolio</span>
+                        </div>
+
+                        <a href="https://github.com/debyan145/Mk-Architecture-portfolio"
+                           target="_blank" class="project-link-btn">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Old Personal Portfolio -->
+                <div class="project-card mini-card" data-category="portfolio">
+                    <div class="project-badge">💼 Portfolio</div>
+
+                    <div class="project-content">
+                        <h3><i class="fas fa-id-card"></i> Old Portfolio</h3>
+                        <p class="project-tech">HTML • CSS</p>
+                        <p>My first personal portfolio made during my early learning phase.</p>
+
+                        <div class="project-tags">
+                            <span class="tag">Frontend</span>
+                        </div>
+
+                        <a href="https://github.com/debyan145/Portfolio-Anis"
+                           target="_blank" class="project-link-btn">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+
+            </div> <!-- END ALL PROJECTS GRID -->
+
+
+                <!-- =========================================================
+         FOOTER SECTION
+         Purpose:
+         - Final section of the All Projects page
+         - Provides quick access to:
+             • GitHub
+             • Homepage
+             • Contact
+         - Clean minimal footer matching the dark theme
+         ========================================================= -->
+     <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Anis Kasdi</h3>
+                    <p>Cybersecurity Enthusiast & Full-Stack Developer</p>
+                    <div class="footer-social">
+                        <a href="https://github.com/debyan145" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/anis-kasdi-61a5a7273/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://tryhackme.com/" target="_blank"><i class="fas fa-shield-alt"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Projects</h4>
+                    <ul>
+                        <li><a href="project.html">All Projects</a></li>
+                        <li><a href="#cybersecurity">Security</a></li>
+                        <li><a href="https://github.com/debyan145" target="_blank">GitHub</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> anis.kasdi2003@gmail.com</li>
+                        <li><i class="fas fa-phone"></i> +33 6 38 01 14 86</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Bordeaux, France</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Anis Kasdi. All rights reserved.</p>
+                <p>Built with <i class="fas fa-heart"></i> and <i class="fas fa-coffee"></i></p>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script>
+/* ==========================================================
+   PROJECT FILTER SCRIPT
+   Purpose:
+   - Allows filtering of project cards by category
+   - Smooth, simple, and lightweight JS (no library)
+   - Uses data-filter on buttons and data-category on cards
+   ========================================================== */
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    // Select all filter buttons
+    const filterButtons = document.querySelectorAll(".filter-btn");
+
+    // Select all project cards
+    const projectCards = document.querySelectorAll(".project-card");
+
+    /* -----------------------------------------
+       Add event listener on ALL filter buttons
+       ----------------------------------------- */
+    filterButtons.forEach(btn => {
+        btn.addEventListener("click", () => {
+
+            // Remove active state from all buttons
+            filterButtons.forEach(b => b.classList.remove("active"));
+
+            // Add active style to clicked one
+            btn.classList.add("active");
+
+            // Get the filter category (ex: 'security', 'web', 'all', etc.)
+            const filter = btn.getAttribute("data-filter");
+
+            /* -----------------------------------------
+               MAIN FILTER LOGIC:
+               - if filter == "all" → show all cards
+               - else → display only matching categories
+               ----------------------------------------- */
+            projectCards.forEach(card => {
+                const cardCategory = card.getAttribute("data-category");
+
+                // Show everything if "all" is selected
+                if (filter === "all") {
+                    card.style.display = "block";
+                    card.classList.add("fade-in-up");
+                }
+                else {
+                    // Show only matching cards
+                    if (cardCategory === filter) {
+                        card.style.display = "block";
+                        card.classList.add("fade-in-up");
+                    } else {
+                        card.style.display = "none";
+                    }
+                }
+            });
+
+        });
+    });
+
+});
+</script>

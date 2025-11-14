@@ -3,268 +3,923 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kasdi Anis - Personal Portfolio</title>
+        <title>Anis Kasdi — Cybersecurity & Network Security Student</title>
+    <meta name="description" content="Computer Science student specializing in Cybersecurity, Network Security, and Full-Stack Development. Active on TryHackMe and Root-me.">
+    <meta name="keywords" content="Cybersecurity, Network Security, Full-Stack Developer, Python, Java, C, Scapy, Wireshark, TryHackMe, Root-me">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Anis Kasdi - Cybersecurity & Development Portfolio">
+    <meta property="og:description" content="Computer Science student specializing in Cybersecurity and Full-Stack Development">
+    <meta property="og:type" content="website">
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header id="header">
-        <div class="container">
-            <nav>
-                <img src="images/logo.png" alt="Anis Kasdi logo">
-                <div class="menu-toggle">☰</div>
-                <ul>
-                    <li><a href="#header">Home</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-            <div class="header-text">
-                <p>COMPUTER SCIENCE STUDENT</p>
-                <h1>Hi, I'm <span>Anis</span><br> a computer science student</h1>
+    <!-- Animated Background -->
+    <div class="bg-gradient"></div>
+    <div class="floating-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-text">AK</span>
+            </div>
+            <div class="nav-links">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#tech-stack" class="nav-link">Tech Stack</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#cybersecurity" class="nav-link">Cybersecurity</a>
+                <a href="#contact" class="nav-link">Contact</a>
+                <a href="project.html" class="nav-link nav-link-special">All Projects</a>
+            </div>
+            <div class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
         </div>
-    </header>
+    </nav>
 
-    <main>
-        <section id="about">
-            <div class="container">
-                <div class="row">
-                    <div class="about-col-1">
-                        <img src="images/user.jpg" alt="Anis Kasdi profile picture">
-                    </div>
-                    <div class="about-col-2">
-                        <h1 class="sub-title">About Me</h1>
-                        <p>As a second-year Computer Science student at Bordeaux University, I am passionate about cybersecurity and network administration. My goal is to bridge the gap between theory and practice by gaining hands-on experience in network protocols, system security, and programming. With a strong foundation in Python, C, and tools like Wireshark and Nmap, I aim to contribute to real-world cybersecurity challenges and build a career as a cybersecurity engineer.</p>
-                        <div class="tabs">
-                            <div class="tab-titles">
-                                <p class="tab-links active-link" data-tab="skills">Skills</p>
-                                <p class="tab-links" data-tab="experience">Experience</p>
-                                <p class="tab-links" data-tab="education">Education</p>
+    <!-- Hero Section -->
+<section id="home" class="hero">
+    <div class="hero-content">
+        <div class="hero-text">
+            <div class="fade-in-up">
+                <span class="hero-subtitle">
+                    🛡️ Cybersecurity Enthusiast • 💻 Full-Stack Developer • 🌐 Network Specialist
+                </span>
+            </div>
+
+            <div class="fade-in-up delay-1">
+                <h1 class="hero-title">
+                    Hi, I'm <span class="gradient-text">Anis Kasdi</span>
+                </h1>
+            </div>
+
+            <div class="fade-in-up delay-2">
+                <p class="hero-description">
+                    L3 Computer Science Student @ Bordeaux University<br>
+                    Passionate about <strong>Cybersecurity</strong>, <strong>Network Security</strong> 
+                    and <strong>Software Engineering</strong>.
+                </p>
+            </div>
+
+            <div class="fade-in-up delay-3">
+                <div class="hero-badges">
+                    <span class="badge">🎯 TryHackMe Active Learner</span>
+                    <span class="badge">🏆 Root-me Challenger</span>
+                    <span class="badge">📚 23+ GitHub Projects</span>
+                </div>
+            </div>
+
+            <div class="fade-in-up delay-4">
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">
+                        <span>View Projects</span><i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">Hire Me</a>
+                    <a href="images/my-cv.pdf" class="btn btn-outline" download>
+                        <i class="fas fa-download"></i><span>Download CV</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-image fade-in-up delay-5">
+            <div class="image-wrapper">
+                <div class="glow-effect"></div>
+                <img src="images/user.jpg" alt="Portrait of Anis Kasdi">
+
+                <div class="floating-badge badge-1">
+                    <i class="fas fa-shield-alt"></i><span>Security</span>
+                </div>
+                <div class="floating-badge badge-2">
+                    <i class="fas fa-code"></i><span>Full-Stack</span>
+                </div>
+                <div class="floating-badge badge-3">
+                    <i class="fas fa-network-wired"></i><span>Networks</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="scroll-indicator">
+        <span>Scroll Down</span>
+        <i class="fas fa-chevron-down"></i>
+    </div>
+</section>
+
+
+    <!-- About Section -->
+<section id="about" class="section">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-subtitle">Get to know me</span>
+            <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+        </div>
+
+        <div class="about-content">
+
+    <!-- COLUMN 1 : texte -->
+    <div class="about-text">
+        <p class="about-intro">
+            I'm a <span class="highlight">Computer Science student (L3)</span> at the University of Bordeaux,
+            focusing on <span class="highlight">Cybersecurity</span>, 
+            <span class="highlight">Network Security</span>, and 
+            <span class="highlight">Full-Stack Development</span>.
+        </p>
+
+        <p class="about-details">
+            I’ve developed more than <strong>23 projects</strong> in fields such as:
+            <strong>network analysis</strong>, 
+            <strong>security tools</strong>, 
+            <strong>full-stack web apps</strong>, and 
+            <strong>low-level programming in C</strong>.
+            I actively practice penetration testing on 
+            <strong>TryHackMe</strong> and <strong>Root-me</strong>.
+        </p>
+    </div>
+
+    <!-- COLUMN 2 : sidebar (learning + stats) -->
+    <div class="about-side">
+
+    <div class="currently-learning">
+        <h3><i class="fas fa-book-reader"></i> Currently Learning</h3>
+        <div class="learning-items">
+            <span class="learning-tag">Advanced Penetration Testing</span>
+            <span class="learning-tag">Kubernetes</span>
+            <span class="learning-tag">Malware Analysis</span>
+            <span class="learning-tag">Cloud Security (AWS)</span>
+        </div>
+    </div>
+
+    <div class="about-stats">
+        <div class="stat-item">
+            <span class="stat-number">3</span>
+            <span class="stat-label">Years Experience</span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-number">23+</span>
+            <span class="stat-label">Projects</span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-number">8+</span>
+            <span class="stat-label">Technologies</span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-number">100%</span>
+            <span class="stat-label">Motivation</span>
+        </div>
+    </div>
+
+</div>
+
+    
+</section>
+
+
+
+<!-- EXPERIENCE / EDUCATION / CERTIFICATIONS -->
+<section id="experience" class="section section-dark">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-subtitle">My professional journey</span>
+            <h2 class="section-title">Experience & <span class="gradient-text">Education</span></h2>
+        </div>
+
+
+
+            <div class="tabs-content">
+
+                <!-- EXPERIENCE -->
+                <div class="tab-pane active" id="experience-tab">
+                    <div class="timeline">
+
+                        <div class="timeline-item">
+                            <div class="timeline-icon">
+                                <i class="fas fa-network-wired"></i>
                             </div>
-                            <div class="tab-contents active-tab" id="skills">
-                                <div class="tab-container">
-                                    <ul>
-                                        <li><i class="fas fa-code"></i><span>CYBERSECURITY & NETWORKING</span><br>Proficient in network protocols, system security, and tools like Wireshark, Nmap, and Scapy.</li>
-                                        <li><i class="fas fa-laptop-code"></i><span>PROGRAMMING</span><br>Experienced in Python and C for scripting, data processing, and network automation.</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="tab-contents" id="experience">
-                                <div class="tab-container">
-                                    <ul>
-                                        <li><span>SOFTWARE DEVELOPER</span><br>2023-2024, Bordeaux University – Developed complex algorithms in C and Python-based scripts for data processing and automation tasks.</li>
-                                        <li><span>BACKEND DEVELOPER</span><br>2023-2024, Bordeaux University – Designed and implemented backend features for a web application similar to Pinterest, ensuring real-time updates and secure API endpoints.</li>
-                                        <li><span>NETWORK DEVELOPER</span><br>2024-2025, Bordeaux University – Utilized Scapy and socket library in Python to analyze and simulate network traffic, and conducted packet analysis with Wireshark to optimize performance.</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="tab-contents" id="education">
-                                <div class="tab-container">
-                                    <ul>
-                                        <li><span>BACHELOR’S DEGREE IN COMPUTER SCIENCE</span><br>2024-2025 (L2), University of Bordeaux.</li>
-                                        <li><span>BACHELOR’S DEGREE IN COMPUTER SCIENCE</span><br>2023-2024 (L1), University of Bordeaux.</li>
-                                    </ul>
+                            <div class="timeline-content">
+                                <span class="timeline-date">2024–2025</span>
+                                <h3>Network Security Developer</h3>
+                                <p>Bordeaux University</p>
+                                <p class="timeline-desc">
+                                    Developed network analysis tools with Scapy, packet sniffers,
+                                    and multi-client servers using <strong>select()</strong>.
+                                </p>
+                                <div class="timeline-tags">
+                                    <span class="tag">Python</span>
+                                    <span class="tag">Scapy</span>
+                                    <span class="tag">Sockets</span>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </section>
 
-        <section id="services" class="service">
-            <div class="container">
-                <h1 class="sub-title">My Services</h1>
-                <div class="services-list">
-                    <div>
-                        <i class="fas fa-laptop-code"></i>
-                        <h2>Web Development</h2>
-                        <p>Building responsive and dynamic websites using HTML, CSS, JavaScript, and Python for backend integration.</p>
-                        <a href="#"><i class="fas fa-arrow-right"></i></a>
-                    </div>
-                    <div>
-                        <i class="fas fa-cogs"></i>
-                        <h2>Application Development</h2>
-                        <p>Creating efficient and scalable applications with Python and C for data processing and automation.</p>
-                        <a href="#"><i class="fas fa-arrow-right"></i></a>
-                    </div>
-                    <div>
-                        <i class="fas fa-mobile-android-alt"></i>
-                        <h2>Network Analysis</h2>
-                        <p>Analyzing and optimizing network traffic using tools like Wireshark, Nmap, and Scapy for enhanced security and performance.</p>
-                        <a href="#"><i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="portfolio">
-            <div class="container">
-                <h1 class="sub-title">My Work</h1>
-                <div class="portfolio-list">
-                    <div>
-                        <img src="images/work-1.png" alt="Project 1 - Web application similar to Pinterest">
-                        <h2>VanillaAcademy</h2>
-                        <p>Web application similar to Pinterest – Designed and implemented backend features for seamless user experience.</p>
-                        <a href="https://chapitre10.vanillacademy.com/" class="portfolio-link">
-                            <i class="fas fa-external-link-alt"></i>
-                        </a>
-                    </div>
-                    <div>
-                        <img src="images/work-2.png" alt="Project 2 - Network traffic analysis tool">
-                        <h2>Network tracking</h2>
-                        <p>Network traffic analysis tool – Utilized Python and Scapy to simulate and optimize network performance.</p>
-                        <a href="https://github.com/debyan145" class="portfolio-link">
-                            <i class="fas fa-external-link-alt"></i>
-                        </a>
-                    </div>
-                    <div>
-                        <img src="images/work-3.png" alt="Project 3 - Data processing script">
-                        <h2>Data</h2>
-                        <p>Data processing script – Developed Python-based scripts for automation and data analysis tasks.</p>
-                        <a href="https://github.com/debyan145" class="portfolio-link">
-                            <i class="fas fa-external-link-alt"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact">
-            <div class="container">
-                <h1 class="sub-title">Contact Me</h1>
-                <div class="contact-wrapper">
-                    <div class="contact-info">
-                        <h2>Get in Touch</h2>
-                        <p><i class="fas fa-phone"></i> +33 6 38 01 14 86</p>
-                        <p><i class="fas fa-envelope"></i> anis.kasdi2003@gmail.com</p>
-                        <div class="social-icons">
-                            <a href="https://www.linkedin.com/in/anis-kasdi-61a5a7273/" target="_blank">
-                                <i class="fab fa-linkedin"></i>
-                            </a>
-                            <a href="https://www.facebook.com/yan.saiyan.56" target="_blank">
-                                <i class="fab fa-facebook-f"></i>
-                            </a>
-                            <a href="https://github.com/debyan145" target="_blank">
-                                <i class="fab fa-github"></i>
-                            </a>
-                            <a href="https://wa.me/33638011486" target="_blank">
-                                <i class="fab fa-whatsapp"></i>
-                            </a>
+                        <div class="timeline-item">
+                            <div class="timeline-icon">
+                                <i class="fas fa-laptop-code"></i>
+                            </div>
+                            <div class="timeline-content">
+                                <span class="timeline-date">2023–2024</span>
+                                <h3>Full-Stack Developer</h3>
+                                <p>Bordeaux University</p>
+                                <p class="timeline-desc">
+                                    Built streaming platforms, e-commerce systems, and dynamic web apps.
+                                </p>
+                                <div class="timeline-tags">
+                                    <span class="tag">HTML/CSS/JS</span>
+                                    <span class="tag">Backend</span>
+                                    <span class="tag">APIs</span>
+                                </div>
+                            </div>
                         </div>
-                        <a href="images/my-cv.pdf" class="download-resume" download>Download Resume</a>
-                    </div>
-                    <div class="contact-form">
-                        <h2>Send a Message</h2>
-                        <form action="https://formspree.io/f/xgvawvpv" method="POST">
-                            <label for="name">Your Name:</label>
-                            <input type="text" id="name" name="name" placeholder="Your Name" required>
-                            
-                            <label for="email">Your Email:</label>
-                            <input type="email" id="email" name="email" placeholder="Your Email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
-                            
-                            <label for="message">Your Message:</label>
-                            <textarea id="message" name="message" placeholder="Your Message" required></textarea>
-                            
-                            <button type="submit">Send Message</button>
-                        </form>
+
+                        <div class="timeline-item">
+                            <div class="timeline-icon">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <div class="timeline-content">
+                                <span class="timeline-date">2023–2024</span>
+                                <h3>Software Developer</h3>
+                                <p>Bordeaux University</p>
+                                <p class="timeline-desc">
+                                    Implemented complex algorithms and developed desktop applications in C & Java.
+                                </p>
+                                <div class="timeline-tags">
+                                    <span class="tag">C</span>
+                                    <span class="tag">Java</span>
+                                    <span class="tag">Algorithms</span>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
-            </div>
-        </section>
-    </main>
 
-    <footer>
+
+
+                
+
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Cybersecurity Section -->
+    <section id="cybersecurity" class="section">
         <div class="container">
-            <p>© 2025 Kasdi Anis. All rights reserved.</p>
+            <div class="section-header">
+                <span class="section-subtitle">🛡️ Security & CTF</span>
+                <h2 class="section-title">Cybersecurity <span class="gradient-text">Journey</span></h2>
+                <p class="section-description">Actively learning and practicing penetration testing</p>
+            </div>
+
+            <div class="cyber-platforms">
+                <div class="cyber-card">
+                    <div class="cyber-header">
+                        <div class="cyber-icon tryhackme">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="cyber-info">
+                            <h3>TryHackMe</h3>
+                            <span class="cyber-status active">Active Learner</span>
+                        </div>
+                    </div>
+                    <div class="cyber-content">
+                        <p>Completing hands-on cybersecurity training rooms and challenges</p>
+                        <div class="cyber-skills">
+                            <span class="skill-badge">Web Exploitation</span>
+                            <span class="skill-badge">Network Security</span>
+                            <span class="skill-badge">Privilege Escalation</span>
+                            <span class="skill-badge">Reconnaissance</span>
+                        </div>
+                        <div class="cyber-stats">
+                            <div class="stat">
+                                <i class="fas fa-trophy"></i>
+                                <span>Rooms Completed</span>
+                            </div>
+                            <div class="stat">
+                                <i class="fas fa-flag"></i>
+                                <span>Challenges Solved</span>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="https://tryhackme.com/" target="_blank" class="cyber-link">
+                        Visit Profile <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+
+                <div class="cyber-card">
+                    <div class="cyber-header">
+                        <div class="cyber-icon rootme">
+                            <i class="fas fa-flag"></i>
+                        </div>
+                        <div class="cyber-info">
+                            <h3>Root-me</h3>
+                            <span class="cyber-status active">CTF Enthusiast</span>
+                        </div>
+                    </div>
+                    <div class="cyber-content">
+                        <p>Solving CTF challenges across multiple security domains</p>
+                        <div class="cyber-skills">
+                            <span class="skill-badge">Cryptography</span>
+                            <span class="skill-badge">System Exploitation</span>
+                            <span class="skill-badge">Forensics</span>
+                            <span class="skill-badge">Web Security</span>
+                        </div>
+                        <div class="cyber-stats">
+                            <div class="stat">
+                                <i class="fas fa-star"></i>
+                                <span>Points Earned</span>
+                            </div>
+                            <div class="stat">
+                                <i class="fas fa-code"></i>
+                                <span>Categories Explored</span>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="https://www.root-me.org/" target="_blank" class="cyber-link">
+                        Visit Profile <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+
+                <div class="cyber-card">
+                    <div class="cyber-header">
+                        <div class="cyber-icon github">
+                            <i class="fab fa-github"></i>
+                        </div>
+                        <div class="cyber-info">
+                            <h3>Security Projects</h3>
+                            <span class="cyber-status verified">Open Source</span>
+                        </div>
+                    </div>
+                    <div class="cyber-content">
+                        <p>Building security tools and network analysis applications</p>
+                        <div class="cyber-skills">
+                            <span class="skill-badge">Network Analysis</span>
+                            <span class="skill-badge">Packet Manipulation</span>
+                            <span class="skill-badge">Security Tools</span>
+                            <span class="skill-badge">Python Scripts</span>
+                        </div>
+                        <div class="cyber-stats">
+                            <div class="stat">
+                                <i class="fas fa-code-branch"></i>
+                                <span>23+ Projects</span>
+                            </div>
+                            <div class="stat">
+                                <i class="fas fa-star"></i>
+                                <span>Open Source</span>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="https://github.com/debyan145" target="_blank" class="cyber-link">
+                        View GitHub <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="skills-showcase">
+                <h3 class="showcase-title">Security Skills & Tools</h3>
+                <div class="skills-grid-cyber">
+                    <div class="skill-item-cyber">
+                        <i class="fas fa-network-wired"></i>
+                        <h4>Network Analysis</h4>
+                        <p>Wireshark, Scapy, Nmap</p>
+                    </div>
+                    <div class="skill-item-cyber">
+                        <i class="fas fa-terminal"></i>
+                        <h4>Penetration Testing</h4>
+                        <p>Metasploit, Burp Suite</p>
+                    </div>
+                    <div class="skill-item-cyber">
+                        <i class="fas fa-code"></i>
+                        <h4>Scripting</h4>
+                        <p>Python, Bash, PowerShell</p>
+                    </div>
+                    <div class="skill-item-cyber">
+                        <i class="fas fa-lock"></i>
+                        <h4>Cryptography</h4>
+                        <p>Encryption, Hashing, PKI</p>
+                    </div>
+                    <div class="skill-item-cyber">
+                        <i class="fab fa-linux"></i>
+                        <h4>Linux Administration</h4>
+                        <p>Ubuntu, Kali Linux, Debian</p>
+                    </div>
+                    <div class="skill-item-cyber">
+                        <i class="fas fa-globe"></i>
+                        <h4>Web Security</h4>
+                        <p>OWASP Top 10, XSS, SQLi</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GitHub Stats Section -->
+    <section id="github-stats" class="section section-dark">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">My open source contributions</span>
+                <h2 class="section-title">GitHub <span class="gradient-text">Activity</span></h2>
+            </div>
+            <div class="github-stats-grid">
+                <div class="github-stat-card">
+                    <i class="fab fa-github"></i>
+                    <h3>23+</h3>
+                    <p>Public Repositories</p>
+                </div>
+                <div class="github-stat-card">
+                    <i class="fas fa-code"></i>
+                    <h3>7+</h3>
+                    <p>Programming Languages</p>
+                </div>
+                <div class="github-stat-card">
+                    <i class="fas fa-star"></i>
+                    <h3>Active</h3>
+                    <p>Contributor</p>
+                </div>
+                <div class="github-stat-card">
+                    <i class="fas fa-code-branch"></i>
+                    <h3>100%</h3>
+                    <p>Open Source</p>
+                </div>
+            </div>
+            <div class="github-cta">
+                <a href="https://github.com/debyan145" target="_blank" class="btn btn-primary btn-large">
+                    <i class="fab fa-github"></i>
+                    <span>Visit My GitHub Profile</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section section-dark">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">What I can do for you</span>
+                <h2 class="section-title">My <span class="gradient-text">Services</span></h2>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Penetration Testing</h3>
+                    <p>Comprehensive security assessments to identify vulnerabilities in your systems and networks</p>
+                    <ul class="service-list">
+                        <li><i class="fas fa-check"></i> Network vulnerability scanning</li>
+                        <li><i class="fas fa-check"></i> Web application testing</li>
+                        <li><i class="fas fa-check"></i> Security reports & recommendations</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <h3>Network Security</h3>
+                    <p>Design and implement secure network architectures with traffic analysis and monitoring</p>
+                    <ul class="service-list">
+                        <li><i class="fas fa-check"></i> Packet analysis with Wireshark</li>
+                        <li><i class="fas fa-check"></i> Network protocol implementation</li>
+                        <li><i class="fas fa-check"></i> Security monitoring tools</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>Full-Stack Development</h3>
+                    <p>Build secure, scalable web applications from frontend to backend</p>
+                    <ul class="service-list">
+                        <li><i class="fas fa-check"></i> Responsive web design</li>
+                        <li><i class="fas fa-check"></i> Backend API development</li>
+                        <li><i class="fas fa-check"></i> Database design & optimization</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fab fa-python"></i>
+                    </div>
+                    <h3>Automation & Scripting</h3>
+                    <p>Develop Python scripts for automation, data processing, and network analysis</p>
+                    <ul class="service-list">
+                        <li><i class="fas fa-check"></i> Network automation with Scapy</li>
+                        <li><i class="fas fa-check"></i> Data processing scripts</li>
+                        <li><i class="fas fa-check"></i> Custom security tools</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Software Development</h3>
+                    <p>Design and develop desktop applications in Java and C with clean architecture</p>
+                    <ul class="service-list">
+                        <li><i class="fas fa-check"></i> Object-oriented design</li>
+                        <li><i class="fas fa-check"></i> GUI applications</li>
+                        <li><i class="fas fa-check"></i> Algorithm optimization</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-bug"></i>
+                    </div>
+                    <h3>Security Auditing</h3>
+                    <p>Review and audit codebases for security vulnerabilities and best practices</p>
+                    <ul class="service-list">
+                        <li><i class="fas fa-check"></i> Code security review</li>
+                        <li><i class="fas fa-check"></i> Vulnerability assessment</li>
+                        <li><i class="fas fa-check"></i> Security recommendations</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Tech Stack Section -->
+<section id="tech-stack" class="section">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-subtitle">Technologies I Work With</span>
+            <h2 class="section-title">Tech <span class="gradient-text">Stack</span></h2>
+        </div>
+
+        <div class="tech-categories">
+
+            <!-- SECURITY & NETWORK -->
+            <div class="tech-category">
+                <h3><i class="fas fa-shield-alt"></i> Security & Networking</h3>
+                <div class="tech-items compact-tech">
+                    <div class="tech-item"><i class="fas fa-network-wired"></i><span>Wireshark</span></div>
+                    <div class="tech-item"><i class="fas fa-search"></i><span>Nmap</span></div>
+                    <div class="tech-item"><i class="fas fa-spider"></i><span>Scapy</span></div>
+                    <div class="tech-item"><i class="fas fa-terminal"></i><span>Metasploit</span></div>
+                    <div class="tech-item"><i class="fas fa-shield-virus"></i><span>Burp Suite</span></div>
+                </div>
+            </div>
+
+            <!-- PROGRAMMING LANGUAGES -->
+            <div class="tech-category">
+                <h3><i class="fas fa-code"></i> Programming Languages</h3>
+                <div class="tech-items compact-tech">
+                    <div class="tech-item"><i class="fab fa-python"></i><span>Python</span></div>
+                    <div class="tech-item"><i class="fab fa-java"></i><span>Java</span></div>
+                    <div class="tech-item"><i class="fas fa-copyright"></i><span>C</span></div>
+                    <div class="tech-item"><i class="fab fa-js"></i><span>JavaScript</span></div>
+                    <div class="tech-item"><i class="fas fa-database"></i><span>SQL</span></div>
+                </div>
+            </div>
+
+            <!-- WEB DEVELOPMENT -->
+            <div class="tech-category">
+                <h3><i class="fas fa-laptop-code"></i> Web Development</h3>
+                <div class="tech-items compact-tech">
+                    <div class="tech-item"><i class="fab fa-html5"></i><span>HTML</span></div>
+                    <div class="tech-item"><i class="fab fa-css3-alt"></i><span>CSS</span></div>
+                    <div class="tech-item"><i class="fab fa-react"></i><span>React</span></div>
+                    <div class="tech-item"><i class="fab fa-node"></i><span>Node.js</span></div>
+                    <div class="tech-item"><i class="fas fa-flask"></i><span>Flask</span></div>
+                </div>
+            </div>
+
+            <!-- TOOLS -->
+            <div class="tech-category">
+                <h3><i class="fas fa-tools"></i> Tools & Platforms</h3>
+                <div class="tech-items compact-tech">
+                    <div class="tech-item"><i class="fab fa-git-alt"></i><span>Git</span></div>
+                    <div class="tech-item"><i class="fab fa-github"></i><span>GitHub</span></div>
+                    <div class="tech-item"><i class="fab fa-linux"></i><span>Linux</span></div>
+                    <div class="tech-item"><i class="fab fa-docker"></i><span>Docker</span></div>
+                    <div class="tech-item"><i class="fas fa-terminal"></i><span>Bash</span></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    </section>
+
+    <!-- Featured Projects Section -->
+   <!-- Featured Projects Section (NO IMAGES VERSION) -->
+<section id="projects" class="section section-dark">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-subtitle">My best work</span>
+            <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+            <p class="section-description">A selection of my best cybersecurity, network, web, and software projects.</p>
+        </div>
+        
+        <!-- Project Filters -->
+        <div class="projects-filter">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="security">Security</button>
+            <button class="filter-btn" data-filter="web">Web Apps</button>
+            <button class="filter-btn" data-filter="network">Network</button>
+            <button class="filter-btn" data-filter="game">Games</button>
+        </div>
+
+        <!-- Projects Grid (no images) -->
+        <div class="projects-grid mini-projects">
+
+            <!-- SECURITY -->
+            <div class="project-card mini-card" data-category="security">
+                <div class="project-badge">🛡️ Security</div>
+                <div class="project-content">
+                    <h3><i class="fas fa-shield-alt"></i> AgentShield</h3>
+                    <p>Browser extension enhancing privacy and blocking harmful scripts and trackers.</p>
+                    <div class="project-tags">
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">Security</span>
+                        <span class="tag">Browser</span>
+                    </div>
+                    <a href="https://github.com/debyan145/Agentshield" target="_blank" class="project-link-btn">
+                        <i class="fas fa-external-link-alt"></i> View Project
+                    </a>
+                </div>
+            </div>
+
+            <div class="project-card mini-card" data-category="security">
+                <div class="project-badge">🛡️ Security</div>
+                <div class="project-content">
+                    <h3><i class="fas fa-user-secret"></i> Privacy Toolkit</h3>
+                    <p>A set of privacy tools designed to hide user identity and reduce digital footprint.</p>
+                    <div class="project-tags">
+                        <span class="tag">Security</span>
+                        <span class="tag">Tools</span>
+                    </div>
+                    <a href="https://github.com/debyan145/privacy" target="_blank" class="project-link-btn">
+                        <i class="fas fa-external-link-alt"></i> View Project
+                    </a>
+                </div>
+            </div>
+
+            <!-- NETWORK -->
+            <div class="project-card mini-card" data-category="network">
+                <div class="project-badge">🌐 Network</div>
+                <div class="project-content">
+                    <h3><i class="fas fa-network-wired"></i> Multi-Client Server</h3>
+                    <p>TCP server handling multiple clients concurrently using select().</p>
+                    <div class="project-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">Sockets</span>
+                        <span class="tag">Concurrency</span>
+                    </div>
+                    <a href="https://github.com/debyan145/Serveur-multiple-using-select" target="_blank" class="project-link-btn">
+                        <i class="fas fa-external-link-alt"></i> View Project
+                    </a>
+                </div>
+            </div>
+
+            <div class="project-card mini-card" data-category="network">
+                <div class="project-badge">🌐 Network</div>
+                <div class="project-content">
+                    <h3><i class="fas fa-globe"></i> HTTP Client (Scapy)</h3>
+                    <p>Low-level HTTP client built from scratch using Scapy packet crafting.</p>
+                    <div class="project-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">Scapy</span>
+                        <span class="tag">Networking</span>
+                    </div>
+                    <a href="https://github.com/debyan145/http-client" target="_blank" class="project-link-btn">
+                        <i class="fas fa-external-link-alt"></i> View Project
+                    </a>
+                </div>
+            </div>
+
+            <!-- WEB -->
+            <div class="project-card mini-card" data-category="web">
+                <div class="project-badge">💻 Web App</div>
+                <div class="project-content">
+                    <h3><i class="fas fa-play-circle"></i> Streaming Platform</h3>
+                    <p>Video streaming system with sessions, playback controls, and account features.</p>
+                    <div class="project-tags">
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">JavaScript</span>
+                    </div>
+                    <a href="https://github.com/debyan145/Streaming-project" target="_blank" class="project-link-btn">
+                        <i class="fas fa-external-link-alt"></i> View Project
+                    </a>
+                </div>
+            </div>
+
+            <div class="project-card mini-card" data-category="web">
+                <div class="project-badge">💻 Web App</div>
+                <div class="project-content">
+                    <h3><i class="fas fa-users"></i> Cowork</h3>
+                    <p>Collaborative workspace platform built for university group projects.</p>
+                    <div class="project-tags">
+                        <span class="tag">HTML</span>
+                        <span class="tag">Teamwork</span>
+                    </div>
+                    <a href="https://github.com/debyan145/Cowork" target="_blank" class="project-link-btn">
+                        <i class="fas fa-external-link-alt"></i> View Project
+                    </a>
+                </div>
+            </div>
+
+            <!-- GAMES -->
+            <div class="project-card mini-card" data-category="game">
+                <div class="project-badge">🎮 Game</div>
+                <div class="project-content">
+                    <h3><i class="fas fa-gamepad"></i> Java Game Engine</h3>
+                    <p>2D Java game demonstrating OOP, player physics, sprites, and collisions.</p>
+                    <div class="project-tags">
+                        <span class="tag">Java</span>
+                        <span class="tag">OOP</span>
+                    </div>
+                    <a href="https://github.com/debyan145/Java-Game" target="_blank" class="project-link-btn">
+                        <i class="fas fa-external-link-alt"></i> View Project
+                    </a>
+                </div>
+            </div>
+
+            <div class="project-card mini-card" data-category="game">
+                <div class="project-badge">🎮 Game</div>
+                <div class="project-content">
+                    <h3><i class="fas fa-shapes"></i> Pipes Game (C)</h3>
+                    <p>Classic puzzle game implemented in C with recursive algorithms.</p>
+                    <div class="project-tags">
+                        <span class="tag">C</span>
+                        <span class="tag">Algorithms</span>
+                    </div>
+                    <a href="https://github.com/debyan145/Pipes_games" target="_blank" class="project-link-btn">
+                        <i class="fas fa-external-link-alt"></i> View Project
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Button -->
+        <div class="view-all-projects">
+            <a href="project.html" class="btn btn-primary btn-large">
+                <span>View All Projects</span>
+                <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+    </div>
+</section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section section-dark">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Let's work together</span>
+                <h2 class="section-title">Get in <span class="gradient-text">Touch</span></h2>
+                <p class="section-description">Available for internships, freelance projects, and collaborations</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-intro">
+                        <h3>Let's discuss your project</h3>
+                        <p>I'm currently looking for internship opportunities in cybersecurity and full-stack development. Feel free to reach out!</p>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4>Phone</h4>
+                            <p>+33 6 38 01 14 86</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4>Email</h4>
+                            <p>anis.kasdi2003@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4>Location</h4>
+                            <p>Bordeaux, Nouvelle-Aquitaine, France</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4>Status</h4>
+                            <p>Available for Internships</p>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/anis-kasdi-61a5a7273/" target="_blank" class="social-link" title="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/debyan145" target="_blank" class="social-link" title="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.facebook.com/yan.saiyan.56" target="_blank" class="social-link" title="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://wa.me/33638011486" target="_blank" class="social-link" title="WhatsApp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                    <a href="images/my-cv.pdf" class="btn btn-primary download-btn" download>
+                        <i class="fas fa-download"></i>
+                        <span>Download Resume</span>
+                    </a>
+                </div>
+                <div class="contact-form-wrapper">
+                    <form id="contactForm" action="https://formspree.io/f/xgvawvpv" method="POST">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" placeholder="John Doe" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Your Email</label>
+                            <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" placeholder="Project Discussion" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Your Message</label>
+                            <textarea id="message" name="message" rows="6" placeholder="Tell me about your project..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-large">
+                            <span>Send Message</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Anis Kasdi</h3>
+                    <p>Cybersecurity Enthusiast & Full-Stack Developer</p>
+                    <div class="footer-social">
+                        <a href="https://github.com/debyan145" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/anis-kasdi-61a5a7273/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://tryhackme.com/" target="_blank"><i class="fas fa-shield-alt"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Projects</h4>
+                    <ul>
+                        <li><a href="project.html">All Projects</a></li>
+                        <li><a href="#cybersecurity">Security</a></li>
+                        <li><a href="https://github.com/debyan145" target="_blank">GitHub</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> anis.kasdi2003@gmail.com</li>
+                        <li><i class="fas fa-phone"></i> +33 6 38 01 14 86</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Bordeaux, France</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Anis Kasdi. All rights reserved.</p>
+                <p>Built with <i class="fas fa-heart"></i> and <i class="fas fa-coffee"></i></p>
+            </div>
         </div>
     </footer>
 
-    <div id="successToast" class="toast">
+    <!-- Toast Notification -->
+    <div id="toast" class="toast">
         <i class="fas fa-check-circle"></i>
-        <span>Message sent successfully! I’ll get back to you soon.</span>
+        <span>Message sent successfully!</span>
     </div>
 
-    <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        // Gestion du menu hamburger
-        const menuToggle = document.querySelector('.menu-toggle');
-        const navUl = document.querySelector('nav ul');
-
-        menuToggle.addEventListener('click', function() {
-            this.classList.toggle('active');
-            navUl.style.display = (navUl.style.display === 'block') ? 'none' : 'block';
-        });
-
-        // Gestion des liens de navigation
-        document.querySelectorAll('nav ul li a').forEach(link => {
-            link.addEventListener('click', function(e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href');
-                const targetSection = document.querySelector(targetId);
-                
-                if (targetSection) {
-                    window.scrollTo({
-                        top: targetSection.offsetTop,
-                        behavior: 'smooth'
-                    });
-                }
-
-                // Fermer le menu mobile après un clic sur un lien
-                if (window.innerWidth <= 768) {
-                    menuToggle.classList.remove('active');
-                    navUl.style.display = 'none';
-                }
-            });
-        });
-
-        // Gestion des onglets dans la section "About"
-        const tabLinks = document.querySelectorAll('.tab-links');
-        const tabContents = document.querySelectorAll('.tab-contents');
-
-        function openTab(tabName) {
-            tabContents.forEach(content => content.style.display = 'none');
-            tabLinks.forEach(link => link.classList.remove('active-link'));
-            
-            document.getElementById(tabName).style.display = 'block';
-            document.querySelector(`.tab-links[data-tab="${tabName}"]`).classList.add('active-link');
-        }
-
-        tabLinks.forEach(link => {
-            link.addEventListener('click', function() {
-                const tabName = this.getAttribute('data-tab');
-                openTab(tabName);
-            });
-        });
-
-        // Gestion de la soumission du formulaire avec notification toast
-        const successToast = document.getElementById('successToast');
-        document.querySelector('#contact form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const formData = new FormData(this);
-            fetch(this.action, {
-                method: 'POST',
-                body: formData,
-                headers: {
-                    'Accept': 'application/json'
-                }
-            }).then(response => {
-                if (response.ok) {
-                    successToast.classList.add('show');
-                    setTimeout(() => {
-                        successToast.classList.remove('show');
-                    }, 3000); // La notification disparaît après 3 secondes
-                    this.reset(); // Réinitialiser le formulaire
-                } else {
-                    alert('Error sending message. Please try again.'); // Garder une alerte simple pour les erreurs
-                }
-            }).catch(error => {
-                alert('Error: ' + error);
-            });
-        });
-    });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
