@@ -606,7 +606,7 @@ window.addEventListener("load", () => {
         "%c🚀 Interested in my code? Check out my GitHub!",
         "font-size: 14px; color: #14b8a6;"
     );
-    console.log("%c🔗 https://github.com/debyan145", "font-size: 12px; color: #64748b;");
+    console.log("%c🔗 https://github.com/AnisKasdi", "font-size: 12px; color: #64748b;");
 });
 setTimeout(() => {
     document.body.classList.add("loaded");

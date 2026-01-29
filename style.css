@@ -155,10 +155,23 @@ body {
 }
 
 @keyframes float {
-    0%, 100% { transform: translate(0,0) scale(1); }
-    25%      { transform: translate(50px,-50px) scale(1.1); }
-    50%      { transform: translate(-30px,30px) scale(0.9); }
-    75%      { transform: translate(30px,50px) scale(1.05); }
+
+    0%,
+    100% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    25% {
+        transform: translate(50px, -50px) scale(1.1);
+    }
+
+    50% {
+        transform: translate(-30px, 30px) scale(0.9);
+    }
+
+    75% {
+        transform: translate(30px, 50px) scale(1.05);
+    }
 }
 
 /* ------------------------------
@@ -190,23 +203,23 @@ body {
 }
 
 .btn-secondary {
-    background: rgba(255,255,255,0.05);
+    background: rgba(255, 255, 255, 0.05);
     color: var(--light);
-    border: 2px solid rgba(255,255,255,0.1);
+    border: 2px solid rgba(255, 255, 255, 0.1);
 }
 
 .btn-secondary:hover {
-    background: rgba(255,255,255,0.15);
+    background: rgba(255, 255, 255, 0.15);
 }
 
 .btn-outline {
     background: transparent;
     color: var(--light);
-    border: 2px solid rgba(255,255,255,0.2);
+    border: 2px solid rgba(255, 255, 255, 0.2);
 }
 
 .btn-outline:hover {
-    background: rgba(255,255,255,0.05);
+    background: rgba(255, 255, 255, 0.05);
     border-color: var(--primary);
 }
 
@@ -220,11 +233,26 @@ body {
    ------------------------------ */
 .badge {
     padding: 0.6rem 1.2rem;
-    background: rgba(99,102,241,0.1);
-    border: 1px solid rgba(99,102,241,0.2);
+    background: rgba(99, 102, 241, 0.1);
+    border: 1px solid rgba(99, 102, 241, 0.2);
     border-radius: 20px;
     font-size: 0.9rem;
     font-weight: 500;
+}
+
+a.badge {
+    text-decoration: none;
+    color: var(--light);
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+a.badge:hover {
+    background: rgba(99, 102, 241, 0.25);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(99, 102, 241, 0.1);
 }
 
 /* ------------------------------
@@ -235,15 +263,36 @@ body {
     animation: fadeInUp 0.8s ease forwards;
 }
 
-.delay-1 { animation-delay: .2s; }
-.delay-2 { animation-delay: .4s; }
-.delay-3 { animation-delay: .6s; }
-.delay-4 { animation-delay: .8s; }
-.delay-5 { animation-delay: 1s; }
+.delay-1 {
+    animation-delay: .2s;
+}
+
+.delay-2 {
+    animation-delay: .4s;
+}
+
+.delay-3 {
+    animation-delay: .6s;
+}
+
+.delay-4 {
+    animation-delay: .8s;
+}
+
+.delay-5 {
+    animation-delay: 1s;
+}
 
 @keyframes fadeInUp {
-    from { opacity: 0; transform: translateY(30px); }
-    to   { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* =========================================================
@@ -260,13 +309,13 @@ nav {
     z-index: 1000;
     background: rgba(15, 23, 42, 0.7);
     backdrop-filter: blur(20px);
-    border-bottom: 1px solid rgba(255,255,255,0.05);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
     transition: all 0.3s ease;
 }
 
 nav.scrolled {
-    background: rgba(15,23,42,0.95);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    background: rgba(15, 23, 42, 0.95);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
 .nav-container {
@@ -409,6 +458,34 @@ nav.scrolled {
 
 /* Buttons already defined in bloc 1 */
 
+.hero-direct-contact {
+    margin-top: 1.5rem;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.contact-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9rem;
+    color: var(--gray);
+    background: rgba(255, 255, 255, 0.03);
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.contact-pill:hover {
+    background: rgba(99, 102, 241, 0.1);
+    color: var(--accent);
+    border-color: rgba(99, 102, 241, 0.3);
+    transform: translateY(-2px);
+}
+
 /* ------------------------------
    HERO IMAGE
    ------------------------------ */
@@ -430,7 +507,7 @@ nav.scrolled {
     height: 100%;
     object-fit: cover;
     border-radius: 50%;
-    border: 5px solid rgba(255,255,255,0.1);
+    border: 5px solid rgba(255, 255, 255, 0.1);
     position: relative;
     z-index: 2;
 }
@@ -449,18 +526,27 @@ nav.scrolled {
 }
 
 @keyframes pulse-glow {
-    0%, 100% { opacity: .3; transform: scale(1); }
-    50%      { opacity: .5; transform: scale(1.1); }
+
+    0%,
+    100% {
+        opacity: .3;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: .5;
+        transform: scale(1.1);
+    }
 }
 
 /* Floating badges */
 .floating-badge {
     position: absolute;
-    background: rgba(15,23,42,0.9);
+    background: rgba(15, 23, 42, 0.9);
     backdrop-filter: blur(10px);
     padding: 0.8rem 1.5rem;
     border-radius: 50px;
-    border: 1px solid rgba(255,255,255,0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     font-weight: 600;
     display: flex;
     gap: 0.5rem;
@@ -472,13 +558,34 @@ nav.scrolled {
     color: var(--accent);
 }
 
-.badge-1 { top: 10%; right: -10%; animation-delay: 0s; }
-.badge-2 { bottom: 20%; left: -10%; animation-delay: 1s; }
-.badge-3 { top: 50%; right: -15%; animation-delay: 2s; }
+.badge-1 {
+    top: 10%;
+    right: -10%;
+    animation-delay: 0s;
+}
+
+.badge-2 {
+    bottom: 20%;
+    left: -10%;
+    animation-delay: 1s;
+}
+
+.badge-3 {
+    top: 50%;
+    right: -15%;
+    animation-delay: 2s;
+}
 
 @keyframes float-badge {
-    0%, 100% { transform: translateY(0); }
-    50%      { transform: translateY(-15px); }
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
 }
 
 /* ------------------------------
@@ -499,8 +606,15 @@ nav.scrolled {
 }
 
 @keyframes bounce {
-    0%,100% { transform: translate(-50%, 0); }
-    50%     { transform: translate(-50%, 10px); }
+
+    0%,
+    100% {
+        transform: translate(-50%, 0);
+    }
+
+    50% {
+        transform: translate(-50%, 10px);
+    }
 }
 
 /* =========================================================
@@ -580,8 +694,8 @@ nav.scrolled {
 
 .learning-tag {
     padding: 0.5rem 1rem;
-    background: rgba(99,102,241,0.1);
-    border: 1px solid rgba(99,102,241,0.2);
+    background: rgba(99, 102, 241, 0.1);
+    border: 1px solid rgba(99, 102, 241, 0.2);
     border-radius: 20px;
     font-size: 0.85rem;
 }
@@ -596,14 +710,14 @@ nav.scrolled {
 .stat-item {
     text-align: center;
     padding: 1.5rem;
-    background: rgba(255,255,255,0.03);
-    border: 1px solid rgba(255,255,255,0.05);
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
     border-radius: 15px;
     transition: all .3s ease;
 }
 
 .stat-item:hover {
-    background: rgba(255,255,255,0.05);
+    background: rgba(255, 255, 255, 0.05);
     transform: translateY(-5px);
 }
 
@@ -699,8 +813,8 @@ nav.scrolled {
 
 .timeline-tags .tag {
     padding: 0.4rem 1rem;
-    background: rgba(99,102,241,0.1);
-    border: 1px solid rgba(99,102,241,0.2);
+    background: rgba(99, 102, 241, 0.1);
+    border: 1px solid rgba(99, 102, 241, 0.2);
     border-radius: 20px;
     font-size: 0.85rem;
     color: var(--primary);
@@ -723,17 +837,17 @@ nav.scrolled {
 }
 
 .cyber-card {
-    background: rgba(255,255,255,0.03);
-    border: 1px solid rgba(255,255,255,0.05);
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
     border-radius: 20px;
     padding: 2rem;
     transition: all .3s ease;
 }
 
 .cyber-card:hover {
-    background: rgba(255,255,255,0.05);
+    background: rgba(255, 255, 255, 0.05);
     transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
 
 .cyber-header {
@@ -783,15 +897,15 @@ nav.scrolled {
 }
 
 .cyber-status.active {
-    background: rgba(20,184,166,0.12);
+    background: rgba(20, 184, 166, 0.12);
     color: var(--accent);
-    border-color: rgba(20,184,166,0.2);
+    border-color: rgba(20, 184, 166, 0.2);
 }
 
 .cyber-status.verified {
-    background: rgba(99,102,241,0.12);
+    background: rgba(99, 102, 241, 0.12);
     color: var(--primary);
-    border-color: rgba(99,102,241,0.2);
+    border-color: rgba(99, 102, 241, 0.2);
 }
 
 /* Description */
@@ -811,8 +925,8 @@ nav.scrolled {
 
 .skill-badge {
     padding: 0.5rem 1rem;
-    background: rgba(99,102,241,0.1);
-    border: 1px solid rgba(99,102,241,0.2);
+    background: rgba(99, 102, 241, 0.1);
+    border: 1px solid rgba(99, 102, 241, 0.2);
     border-radius: 20px;
     font-size: 0.85rem;
     color: var(--primary);
@@ -830,7 +944,7 @@ nav.scrolled {
     align-items: center;
     gap: 0.5rem;
     padding: 0.8rem;
-    background: rgba(255,255,255,0.03);
+    background: rgba(255, 255, 255, 0.03);
     border-radius: 10px;
     font-size: 0.9rem;
 }
@@ -874,8 +988,8 @@ nav.scrolled {
 }
 
 .skill-item-cyber {
-    background: rgba(255,255,255,0.03);
-    border: 1px solid rgba(255,255,255,0.05);
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
     border-radius: 15px;
     padding: 2rem;
     text-align: center;
@@ -883,8 +997,8 @@ nav.scrolled {
 }
 
 .skill-item-cyber:hover {
-    background: rgba(99,102,241,0.1);
-    border-color: rgba(99,102,241,0.3);
+    background: rgba(99, 102, 241, 0.1);
+    border-color: rgba(99, 102, 241, 0.3);
     transform: translateY(-5px);
 }
 
@@ -919,17 +1033,17 @@ nav.scrolled {
 }
 
 .service-card {
-    background: rgba(255,255,255,0.03);
-    border: 1px solid rgba(255,255,255,0.05);
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
     border-radius: 20px;
     padding: 2.5rem;
     transition: all .3s ease;
 }
 
 .service-card:hover {
-    background: rgba(255,255,255,0.05);
+    background: rgba(255, 255, 255, 0.05);
     transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
 
 /* Icon */
@@ -952,7 +1066,7 @@ nav.scrolled {
     margin-bottom: 1rem;
 }
 
-.service-card > p {
+.service-card>p {
     margin-bottom: 1.3rem;
     color: var(--gray);
     line-height: 1.6;
@@ -975,6 +1089,7 @@ nav.scrolled {
     color: var(--accent);
     margin-top: 0.2rem;
 }
+
 /* =========================================================
    BLOC 5 — TECH STACK + PROJECTS (CARTES + FILTRES)
    ========================================================= */
@@ -1005,8 +1120,8 @@ nav.scrolled {
 }
 
 .tech-item {
-    background: rgba(255,255,255,0.03);
-    border: 1px solid rgba(255,255,255,0.05);
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
     border-radius: 15px;
     padding: 1.7rem 1rem;
     text-align: center;
@@ -1015,9 +1130,9 @@ nav.scrolled {
 }
 
 .tech-item:hover {
-    background: rgba(99,102,241,0.1);
+    background: rgba(99, 102, 241, 0.1);
     transform: translateY(-5px);
-    border-color: rgba(99,102,241,0.3);
+    border-color: rgba(99, 102, 241, 0.3);
 }
 
 .tech-item i {
@@ -1048,8 +1163,8 @@ nav.scrolled {
 
 .filter-btn {
     padding: 0.8rem 1.5rem;
-    background: rgba(255,255,255,0.03);
-    border: 1px solid rgba(255,255,255,0.1);
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 25px;
     cursor: pointer;
     font-weight: 600;
@@ -1078,25 +1193,22 @@ nav.scrolled {
 
 /* Carte principale */
 .project-card {
-    background: rgba(255,255,255,0.03);
-    border: 1px solid rgba(255,255,255,0.05);
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
     border-radius: 20px;
     overflow: hidden;
     position: relative;
     transition: .3s ease;
 }
 
-.project-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
-}
+
 
 /* Badge */
 .project-badge {
     position: absolute;
     top: 1rem;
     left: 1rem;
-    background: rgba(15,23,42,0.9);
+    background: rgba(15, 23, 42, 0.9);
     padding: 0.45rem 1rem;
     border-radius: 20px;
     font-size: 0.85rem;
@@ -1113,7 +1225,8 @@ nav.scrolled {
     position: relative;
     overflow: hidden;
     height: 250px;
-    background: rgba(255,255,255,0.03); /* fallback when no image */
+    background: rgba(255, 255, 255, 0.03);
+    /* fallback when no image */
 }
 
 .project-image img {
@@ -1131,7 +1244,7 @@ nav.scrolled {
 .project-overlay {
     position: absolute;
     inset: 0;
-    background: rgba(99,102,241,0.9);
+    background: rgba(99, 102, 241, 0.9);
     opacity: 0;
     display: flex;
     justify-content: center;
@@ -1174,7 +1287,7 @@ nav.scrolled {
     margin-bottom: 1rem;
 }
 
-.project-content > p {
+.project-content>p {
     color: var(--gray);
     line-height: 1.6;
     margin-bottom: 1.3rem;
@@ -1190,8 +1303,8 @@ nav.scrolled {
 
 .project-tag {
     padding: 0.4rem 1rem;
-    background: rgba(99,102,241,0.1);
-    border: 1px solid rgba(99,102,241,0.2);
+    background: rgba(99, 102, 241, 0.1);
+    border: 1px solid rgba(99, 102, 241, 0.2);
     border-radius: 15px;
     font-size: 0.85rem;
 }
@@ -1259,8 +1372,8 @@ nav.scrolled {
 }
 
 .github-stat-card {
-    background: rgba(255,255,255,0.03);
-    border: 1px solid rgba(255,255,255,0.05);
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
     padding: 2.5rem;
     text-align: center;
     border-radius: 20px;
@@ -1269,8 +1382,8 @@ nav.scrolled {
 
 .github-stat-card:hover {
     transform: translateY(-10px);
-    background: rgba(255,255,255,0.05);
-    box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
 }
 
 .github-stat-card i {
@@ -1306,8 +1419,8 @@ nav.scrolled {
 }
 
 .testimonial-card {
-    background: rgba(255,255,255,0.03);
-    border: 1px solid rgba(255,255,255,0.05);
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
     padding: 2rem;
     border-radius: 20px;
     transition: .3s ease;
@@ -1315,7 +1428,7 @@ nav.scrolled {
 
 .testimonial-card:hover {
     transform: translateY(-5px);
-    background: rgba(255,255,255,0.05);
+    background: rgba(255, 255, 255, 0.05);
 }
 
 .testimonial-header {
@@ -1432,8 +1545,8 @@ nav.scrolled {
 .social-link {
     width: 50px;
     height: 50px;
-    background: rgba(255,255,255,0.05);
-    border: 1px solid rgba(255,255,255,0.1);
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 12px;
     color: var(--light);
     display: flex;
@@ -1449,8 +1562,8 @@ nav.scrolled {
 }
 
 .contact-form-wrapper {
-    background: rgba(255,255,255,0.03);
-    border: 1px solid rgba(255,255,255,0.05);
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
     padding: 2.5rem;
     border-radius: 20px;
 }
@@ -1469,8 +1582,8 @@ nav.scrolled {
 .form-group textarea {
     width: 100%;
     padding: 1rem 1.2rem;
-    background: rgba(255,255,255,0.05);
-    border: 1px solid rgba(255,255,255,0.1);
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 12px;
     color: var(--light);
     font-size: 1rem;
@@ -1480,7 +1593,7 @@ nav.scrolled {
 .form-group input:focus,
 .form-group textarea:focus {
     border-color: var(--primary);
-    background: rgba(255,255,255,0.08);
+    background: rgba(255, 255, 255, 0.08);
 }
 
 textarea {
@@ -1495,7 +1608,7 @@ textarea {
 
 .footer {
     padding: 4rem 2rem 2rem;
-    border-top: 1px solid rgba(255,255,255,0.05);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .footer-content {
@@ -1546,8 +1659,8 @@ textarea {
 .footer-social a {
     width: 42px;
     height: 42px;
-    background: rgba(255,255,255,0.05);
-    border: 1px solid rgba(255,255,255,0.1);
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 10px;
     color: var(--light);
     display: flex;
@@ -1565,7 +1678,7 @@ textarea {
     text-align: center;
     margin-top: 2rem;
     padding-top: 2rem;
-    border-top: 1px solid rgba(255,255,255,0.05);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
     color: var(--gray);
 }
 
@@ -1578,14 +1691,14 @@ textarea {
     position: fixed;
     bottom: 2rem;
     right: 2rem;
-    background: rgba(20,184,166,0.95);
+    background: rgba(20, 184, 166, 0.95);
     padding: 1rem 1.4rem;
     border-radius: 12px;
     color: white;
     display: flex;
     gap: 1rem;
     align-items: center;
-    box-shadow: 0 12px 30px rgba(0,0,0,0.3);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
     transform: translateX(400px);
     transition: .3s ease;
     z-index: 9999;
@@ -1639,7 +1752,7 @@ textarea {
         left: -100%;
         width: 100%;
         height: calc(100vh - 70px);
-        background: rgba(15,23,42,0.98);
+        background: rgba(15, 23, 42, 0.98);
         flex-direction: column;
         padding: 3rem 2rem;
         gap: 2rem;
@@ -1687,9 +1800,11 @@ textarea {
 
 .toast {
     position: fixed;
-    top: 20px;          /* 🆕 au lieu de bottom */
+    top: 20px;
+    /* 🆕 au lieu de bottom */
     right: 20px;
-    z-index: 999999;    /* 🆕 au top */
+    z-index: 999999;
+    /* 🆕 au top */
     background: rgba(20, 184, 166, 0.95);
     color: white;
     padding: 14px 18px;
@@ -1729,12 +1844,13 @@ body.page-transition-out {
 
 /* Fix padding top for pages WITHOUT hero */
 .page-header {
-    padding-top: 140px; /* espace exact pour éviter chevauchement */
+    padding-top: 140px;
+    /* espace exact pour éviter chevauchement */
 }
 
 .project-card {
-    background: rgba(255,255,255,0.04);
-    border: 1px solid rgba(255,255,255,0.07);
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.07);
     border-radius: 14px;
     overflow: hidden;
     transition: transform .25s ease, box-shadow .25s ease, border .25s;
@@ -1742,14 +1858,14 @@ body.page-transition-out {
 
 .project-card:hover {
     transform: translateY(-6px);
-    border-color: rgba(255,255,255,0.15);
-    box-shadow: 0 12px 28px rgba(0,0,0,0.35);
+    border-color: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35);
 }
 
 /* Image */
 .project-image {
     height: 220px;
-    background: rgba(255,255,255,0.03);
+    background: rgba(255, 255, 255, 0.03);
 }
 
 .project-image img {
@@ -1777,11 +1893,13 @@ body.page-transition-out {
 .project-content {
     padding: 1.6rem 1.8rem 2rem;
 }
+
 .project-content h3 {
     font-size: 1.3rem;
     margin-bottom: .6rem;
     font-weight: 700;
 }
+
 .project-content p {
     color: var(--gray);
     font-size: 0.95rem;
